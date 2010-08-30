@@ -1,4 +1,3 @@
-require 'app'
 require 'app/autoloader'
-App.register Sinatra::Reloader
+require 'app'
 run App

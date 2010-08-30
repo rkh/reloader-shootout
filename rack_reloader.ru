@@ -1,5 +1,5 @@
-require 'app'
 require 'app/autoloader'
+require 'app'
 
 class FixedReloader < Rack::Reloader
   def reload!(stderr = $stderr)

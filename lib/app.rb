@@ -3,17 +3,17 @@ require 'sinatra/base'
 class App < Sinatra::Base
   helpers MyHelpers
   register Extension
-  enable :inline_templates
-  routes_from 'app/more_routes'
+  set :inline_templates, __FILE__
+  routes_from 'app/more_routes.rb'
   get('/') { haml :index }
 end
 
 __END__
 
-@@@ index
+@@ index
 Chunky Bacon!
 
-@@@ layout
+@@ layout
 !!!
 %html
   %head
