@@ -1,6 +1,7 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
+  reset! if respond_to? :do_reset? and do_reset?
   helpers MyHelpers
   register Extension
   set :inline_templates, __FILE__

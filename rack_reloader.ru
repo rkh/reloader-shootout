@@ -1,12 +1,7 @@
 require 'app/autoloader'
 require 'app'
 
-class FixedReloader < Rack::Reloader
-  def reload!(stderr = $stderr)
-    App.reset!
-    super
-  end
-end
+App.set :do_reset, true
 
-use FixedReloader, 0
+use Rack::Reloader, 0
 run App

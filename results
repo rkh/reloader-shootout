@@ -1,0 +1,10 @@
+                                Without Changes         With Changes
+No Reloader                     0.0044671058654         -*
+Rack::Reloader                  0.0231933116912         0.0236261129379
+Sinatra::Reloader               0.0088394482930         0.0090538899103
+ActiveSupport                   0.0207427183787         0.0207780686060
+ActiveSupport Reloaded          0.0147878090540         0.0208899911244
+Shotgun                         0.9925425291061         1.0038710657755
+Magical Reloading Sparkles      0.0044739915830         0.9384773521974
+
+* did not pick up changes

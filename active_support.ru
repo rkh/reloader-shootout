@@ -1,8 +1,10 @@
 require 'active_support/dependencies'
-ActiveSupport::Dependencies.autoload_paths = ['lib']
+ActiveSupport::Dependencies.autoload_paths  = ['lib']
+ActiveSupport::Dependencies.mechanism       = :load
 
 module ReloadingApp
-  def call(env)
+  def self.call(env)
+    require_dependency 'app'
     App.call(env)
   ensure
     ActiveSupport::Dependencies.clear
