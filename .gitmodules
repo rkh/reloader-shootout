@@ -1,0 +1,3 @@
+[submodule "vendor/rkh-rails"]
+	path = vendor/rkh-rails
+	url = git://github.com/rkh/rails.git
